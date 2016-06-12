@@ -312,6 +312,8 @@ def add_subject(sub):
     mice = mice_file.read().splitlines()
     if sub in mice:
         return False
+    if sub == '':
+        return False
     sub += '\n'
     mice_file.close()
     try:
